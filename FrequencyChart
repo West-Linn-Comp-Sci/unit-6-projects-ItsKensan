@@ -2,10 +2,12 @@
 import java.util.Scanner;
 
 public class FrequencyChart {
-    public FrequencyChart() {
+
+    public FrequencyChart() {     
     }
 
     public static void main(String[] args) {
+    
         StringBuilder one = new StringBuilder();
         String two = "";
         String three = "";
@@ -18,12 +20,15 @@ public class FrequencyChart {
         String ten = "";
         Scanner input = new Scanner(System.in);
         System.out.println("How many integers would you like to add?");
+        
         int intNum = input.nextInt();
         int[] integers = new int[intNum];
 
         for(int i = 0; i < intNum; ++i) {
+        
             System.out.println("Please enter a number from 1-100");
             integers[i] = input.nextInt();
+            
             if (integers[i] >= 1 && integers[i] <= 10) {
                 one.append("*");
             } else if (integers[i] >= 11 && integers[i] <= 20) {
