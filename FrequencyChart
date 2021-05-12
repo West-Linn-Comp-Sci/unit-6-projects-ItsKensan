@@ -1,0 +1,54 @@
+
+import java.util.Scanner;
+
+public class FrequencyChart {
+    public FrequencyChart() {
+    }
+
+    public static void main(String[] args) {
+        StringBuilder one = new StringBuilder();
+        String two = "";
+        String three = "";
+        String four = "";
+        String five = "";
+        String six = "";
+        String seven = "";
+        String eight = "";
+        String nine = "";
+        String ten = "";
+        Scanner input = new Scanner(System.in);
+        System.out.println("How many integers would you like to add?");
+        int intNum = input.nextInt();
+        int[] integers = new int[intNum];
+
+        for(int i = 0; i < intNum; ++i) {
+            System.out.println("Please enter a number from 1-100");
+            integers[i] = input.nextInt();
+            if (integers[i] >= 1 && integers[i] <= 10) {
+                one.append("*");
+            } else if (integers[i] >= 11 && integers[i] <= 20) {
+                two = two + "*";
+            } else if (integers[i] >= 21 && integers[i] <= 30) {
+                three = three + "*";
+            } else if (integers[i] >= 31 && integers[i] <= 40) {
+                four = four + "*";
+            } else if (integers[i] >= 41 && integers[i] <= 50) {
+                five = five + "*";
+            } else if (integers[i] >= 51 && integers[i] <= 60) {
+                six = six + "*";
+            } else if (integers[i] >= 61 && integers[i] <= 70) {
+                seven = seven + "*";
+            } else if (integers[i] >= 71 && integers[i] <= 80) {
+                eight = eight + "*";
+            } else if (integers[i] >= 81 && integers[i] <= 90) {
+                nine = nine + "*";
+            } else if (integers[i] >= 91 && integers[i] <= 100) {
+                ten = ten + "*";
+            }
+        }
+
+        System.out.println("1 - 10: " + one + "\n11 - 20: " + two + "\n21 - 30: " + three + "\n31 - 40: " + four);
+        System.out.println("41 - 50: " + five + "\n51 - 60: " + six + "\n61 - 70: " + seven + "\n71 - 80: " + eight);
+        System.out.println("81 - 90: " + nine + "\n91 - 100: " + ten);
+    }
+}
