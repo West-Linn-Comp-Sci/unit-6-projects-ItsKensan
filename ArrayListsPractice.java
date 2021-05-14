@@ -143,11 +143,7 @@ public class ArrayListsPractice {
     // returns the number of coins in the Purse that matches aCoin
     // (both myName & myValue)
 
-    public int count(Coin aCoin) {
 
-    }
-
-    // returns the name of the Coin in the Purse that has the smallest value
 }
 }
 
