@@ -1,0 +1,103 @@
+import java.util.ArrayList;
+
+public class Growable {
+
+    public String water(){
+        return "Time to water our plants!";
+    }
+
+    public String feed(){
+        return "I am well fed!";
+    }
+
+    public String getInstructions(){
+        return "Don't forget to water the plants twice a day!";
+    }
+
+    public String harvest(){
+        return "Time to harvest";
+    }
+
+
+    public static void main(String[] args){
+
+        ArrayList<Vegetable> garden = new ArrayList<Vegetable>();
+
+        garden.add(new Carrots("Carrot 1", "idk"));
+        garden.add(new Tomato("Tomato 1", "red"));
+        garden.add(new Lettuce("Lettuce 1", "idk"));
+
+        for (int i = 0; i < garden.size(); i++){
+
+            System.out.println(garden.get(i));
+        }
+    }
+
+}
+
+public interface Vegetable implemets Growable {
+    private String name;
+    private String type;
+    private String instructions;
+
+    public Vegetable(String name, String type){
+        this.name = name;
+        this.type = type;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+
+    }
+
+    public String getInstructions(){
+        return "Make sure you water the plants at least once a day!";
+    }
+
+    protected void setInstructions(String instructions){
+        this.instructions = instructions;
+
+    }
+
+    public String getType(){
+        return type;
+    }
+}
+
+public class Carrots extends Vegetable{
+
+    private String setInstructions;
+
+    public Carrots(String name, String type) {
+        super(name, type);
+    }
+
+
+}
+
+
+
+public class Tomato extends Vegetable{
+
+    public Tomato(String name, String type){
+
+        super(name,type);
+    }
+
+}
+
+
+public class Lettuce extends Vegetable{
+
+    public Lettuce(String name, String type){
+
+        super(name,type);
+    }
+
+}
+
+
